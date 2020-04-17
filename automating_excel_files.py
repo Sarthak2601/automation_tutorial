@@ -7,7 +7,7 @@ def process_workbook(file_name, position_of_chart, new_file_name):
     sheet = workbook['Sheet1']
 
     for row in range(2, sheet.max_row + 1):
-        corrected_price = sheet.cell(row, 3).value = 0.9 * sheet.cell(row, 3).value
+        corrected_price = 0.9 * sheet.cell(row, 3).value
         corrected_price_cell = sheet.cell(row, 4)
         corrected_price_cell.value = corrected_price
 
